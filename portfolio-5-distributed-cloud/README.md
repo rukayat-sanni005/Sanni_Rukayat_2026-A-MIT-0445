@@ -12,7 +12,7 @@ This portfolio demonstrates the cloud deployment and distributed database archit
 * **Automatic Failover:** If the Primary node becomes unavailable due to hardware failure or network partition, the remaining Secondary nodes hold an automated election and promote a new Primary within seconds—ensuring uninterrupted access to student portals.
 
 ### Cloud Deployment Evidence
-*(Place your Atlas Cluster / Replica Set screenshot inside `portfolio-5-distributed-cloud/` and update the filename below if needed)*
+
 ![MongoDB Atlas 3-Node Replica Set Deployment](atlas-cluster-replication.png)
 
 ---
