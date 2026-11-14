@@ -6,9 +6,9 @@ This portfolio demonstrates the cloud deployment and distributed database archit
 ---
 
 ## 1. Cloud Deployment & High Availability (3-Node Replica Set)
-`Cluster0` is deployed as a **3-node Replica Set** across AWS availability zones[cite: 2]:
+`Cluster0` is deployed as a **3-node Replica Set** across AWS availability zones:
 * **1 Primary Node:** Receives all write operations (`insert`, `update`, `delete`) such as course registrations and lecturer grade submissions, and logs them to the **oplog** (operations log).
-* **2 Secondary Nodes:** Asynchronously replicate the oplog from the Primary node in real time to maintain identical copies of `peak_university_nosql.student_transcripts`[cite: 11].
+* **2 Secondary Nodes:** Asynchronously replicate the oplog from the Primary node in real time to maintain identical copies of `peak_university_nosql.student_transcripts`.
 * **Automatic Failover:** If the Primary node becomes unavailable due to hardware failure or network partition, the remaining Secondary nodes hold an automated election and promote a new Primary within seconds—ensuring uninterrupted access to student portals.
 
 ### Cloud Deployment Evidence
@@ -18,10 +18,11 @@ This portfolio demonstrates the cloud deployment and distributed database archit
 ---
 
 ## 2. Horizontal Scaling & Sharding Strategy
-As Peak University scales across multiple campuses, faculties, and multi-year alumni cohorts, a single server's storage and write throughput become bottlenecks. Horizontal **Sharding** partitions `student_transcripts` across multiple shard clusters[cite: 11, 16]:
+As Peak University scales across multiple campuses, faculties, and multi-year alumni cohorts, a single server's storage and write throughput become bottlenecks. Horizontal **Sharding** partitions `student_transcripts` across multiple shard clusters.
+
 * **Chosen Shard Key:** `{ "department.department_id": 1, "_id": 1 }` (Compound Hashed/Ranged Shard Key).
 * **Why This Shard Key Works:**
-  * **High Cardinality & Even Distribution:** Combining `department_id` with unique student ID (`_id`, e.g., `STU-2024-001`) prevents "hot shards" (jumbo chunks) where all writes hit one server[cite: 11].
+  * **High Cardinality & Even Distribution:** Combining `department_id` with unique student ID (`_id`, e.g., `STU-2024-001`) prevents "hot shards" (jumbo chunks) where all writes hit one server.
   * **Targeted Queries (Query Isolation):** Departmental queries (e.g., Computer Science HOD generating semester broadsheets) route directly to the specific shard holding that department rather than broadcasting across all shards.
 
 ---
