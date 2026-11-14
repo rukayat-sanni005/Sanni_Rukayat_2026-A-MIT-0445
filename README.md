@@ -8,10 +8,10 @@
 ---
 
 ## Case Study Overview: Peak University
-**Peak University** is a tertiary academic institution managing student admissions, departmental administration, course registrations, continuous assessment (CA) and examination grading, GPA computation, and official academic transcript generation[cite: 12].
+**Peak University** is a tertiary academic institution managing student admissions, departmental administration, course registrations, continuous assessment (CA) and examination grading, GPA computation, and official academic transcript generation.
 * **Primary Users:** Academic Registry/Administrators, Departmental Heads, Lecturers, and Students.
-* **Core Data Entities:** Students, Departments, Lecturers, Courses, Semester Enrollments, Grades, and Academic Audit Logs[cite: 12].
-* **Key Operations:** Course registration, atomic grade submission with automatic total/grade calculation, GPA/transcript retrieval, multi-criteria academic reporting, and high-availability cloud transcript lookup[cite: 12].
+* **Core Data Entities:** Students, Departments, Lecturers, Courses, Semester Enrollments, Grades, and Academic Audit Logs.
+* **Key Operations:** Course registration, atomic grade submission with automatic total/grade calculation, GPA/transcript retrieval, multi-criteria academic reporting, and high-availability cloud transcript lookup.
 
 ---
 
