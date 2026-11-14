@@ -14,11 +14,13 @@ This portfolio re-models the relational ``academic database`` into a document-or
 
 Collection Setup & Embedded Document Insertion
 Both student transcript documents (STU-2024-001 and STU-2024-002) were inserted into peak_university_nosql.student_transcripts with nested department objects and semester course arrays.
+
 Single-Read Transcript Retrieval (Eliminating SQL JOINs)
 Querying { "_id": "STU-2024-001" } retrieves Tunde Adeyemi's personal details, department metadata, and complete semester course breakdown in a single document.
 
 Schema Flexibility & Nested Array Querying
 Extra attributes (extracurricular_achievements / "Hackathon Winner (2026)") were added exclusively to Amara Okeke's document (STU-2024-002) without altering the schema of other students, and queried using dot-notation ({ "academic_records.courses.total_score": { "$gte": 85 } })
+
 
 
 2. Document Schema Structure (`student_transcripts`)
