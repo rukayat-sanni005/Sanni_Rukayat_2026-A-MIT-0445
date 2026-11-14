@@ -1,7 +1,6 @@
 # MIT 8103: Advanced Database Systems Portfolio — Peak University
 
 **Student Name:** Rukayat Sanni  
-**Student Email:** r.sanni6535@miva.edu.ng  
 **Course:** MIT 8103 – Advanced Database Systems (2026/2027 First Semester).
 **Institution:** MIVA Open University – School of Postgraduate Studies.
 **Case Study Organisation:** Peak University Student Result & Academic Management System.
