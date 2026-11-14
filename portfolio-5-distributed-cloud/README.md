@@ -1,7 +1,7 @@
 # Distributed and Cloud Database Architecture (`peak_university`)
 
 ## Overview
-This portfolio demonstrates the cloud deployment and distributed database architecture for **Peak University**, hosted on **MongoDB Atlas** (`Cluster0`, AWS `eu-west-3` Paris region, MongoDB v8.0.37)[cite: 2, 16]. It examines how replication, horizontal sharding, high availability, and consistency models support university-wide academic operations during peak registration and exam result periods.
+This portfolio demonstrates the cloud deployment and distributed database architecture for **Peak University**, hosted on **MongoDB Atlas** (`Cluster0`, AWS `eu-west-3` Paris region, MongoDB v8.0.37). It examines how replication, horizontal sharding, high availability, and consistency models support university-wide academic operations during peak registration and exam result periods.
 
 ---
 
